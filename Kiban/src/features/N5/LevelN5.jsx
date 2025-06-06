@@ -2,7 +2,6 @@ import { Navigate, useNavigate } from "react-router-dom";
 import N5Vocabulary from "./N5Vocabulary";
 import N5Grammar from "./N5Grammar";
 import BubbleChamberLogo from "../../components/Logo";
-import { BackgroundLines } from "../../components/background-lines";
 
 const LevelN5 = () => {
   const navigate = useNavigate();
