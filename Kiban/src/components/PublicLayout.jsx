@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "../Layout/header";
+import Header from "../Layout/Header";
 
 const PublicLayout = () => (
   <div>

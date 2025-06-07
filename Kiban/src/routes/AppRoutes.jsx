@@ -4,19 +4,22 @@ import LevelN4 from "../features/N4/LevelN4";
 import Hero from "../components/Hero";
 import PublicLayout from "../components/PublicLayout";
 import DashboardLayout from "../components/DashboardLayout";
+import AboutSection from "../features/About/AboutSection";
+import { Outlet } from "react-router-dom";
 
 const AppRoutes = () => {
   return (
     <Routes>
-  <Route element={<PublicLayout />}>
-    <Route path="/" element={<Hero />} />
-  </Route>
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<Hero />} />
+      </Route>
 
-  <Route element={<DashboardLayout />}>
-    <Route path="/JPLT/N5" element={<LevelN5 />} />
-    <Route path="/JPLT/N4" element={<LevelN4 />} />
-  </Route>
-</Routes>
+      <Route element={<DashboardLayout />}>
+        <Route path="/About" element={<AboutSection />} />
+        <Route path="/About/N5" element={<LevelN5 />} />
+        <Route path="/About/N4" element={<LevelN4 />} />
+      </Route>
+    </Routes>
   );
 }
 

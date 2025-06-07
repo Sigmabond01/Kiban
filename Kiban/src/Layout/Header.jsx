@@ -7,9 +7,7 @@ function Header() {
       <div className="flex justify-between items-center">
         <BubbleChamberLogo />
         <nav className="ml-auto space-x-8 font-Noto Sans JP">
-          <Link to="/" className="hover:underline">Home</Link>
-          <Link to="/JPLT/N5" className="hover:underline">JPLT N5</Link>
-          <Link to="/JPLT/N4" className="hover:underline">JPLT N4</Link>
+          <Link to="/About" className="hover:underline">Explore Here</Link>
         </nav>
       </div>
     </header>
