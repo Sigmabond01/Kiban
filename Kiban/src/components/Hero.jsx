@@ -9,7 +9,7 @@ const Hero = () => {
         <h1 className="text-9xl text-slate-700">KIBAN</h1>
         <h2 className="text-6xl text-slate-700 mb-10">起盤</h2>
         <p className="text-3xl mt-6 text-white font-light">Learn Japanese from the foundation up.</p>
-        <p className="text-3xl mt-2 mb-6 text-white font-normal">基礎から日本語を築き上げよう。</p>
+        <p className="text-3xl mt-2 mb-6 text-white font-light">基礎から日本語を築き上げよう。</p>
         <AboutButton />
       </div>
 
