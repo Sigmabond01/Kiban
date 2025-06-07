@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-background-blue {
-  
+body {
+    font-family: 'Noto Sans JP', sans-serif;
 }

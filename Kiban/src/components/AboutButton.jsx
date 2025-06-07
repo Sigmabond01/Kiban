@@ -4,11 +4,13 @@ function AboutButton() {
     const navigate = useNavigate();
 
     return (
-
-	<button onClick={() => navigate("/About")}
-    className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
-        Start Here!
-    </button>
+    <div className="flex items-center justify-center mt-12">
+	 <button onClick={() => navigate("/About")}
+     className="px-12 py-5 bg-white/20 text-white border border-white/30 rounded-full
+      hover:bg-white/30 hover:scale-105 transition-all duration-300 font-medium shadow-lg">
+     Start Here!
+     </button>
+    </div>
     );
 }
 
