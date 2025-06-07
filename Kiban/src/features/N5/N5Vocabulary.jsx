@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { ChevronDown, ChevronRight, FileText, Youtube } from 'lucide-react';
 
-// N5Vocabulary Component
 const N5Vocabulary = () => {
   const [expandedSection, setExpandedSection] = useState(true);
   

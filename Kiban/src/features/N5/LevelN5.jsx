@@ -9,7 +9,6 @@ const LevelN5 = () => {
   return (
     <div className="min-h-screen bg-[url('/src/assets/background1.png')] bg-fixed bg-cover bg-center text-white flex flex-col">
       <BubbleChamberLogo />
-      {/* Header with Logo */}
       <div className="text-center py-8">
         <h1 className="text-6xl font-bold mb-4 text-white tracking-wider">
           JLPT N5
@@ -19,20 +18,16 @@ const LevelN5 = () => {
         </p>
       </div>
 
-      {/* Main Content Area */}
       <div className="flex-1 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto w-full">
-        {/* Step 1: Vocabulary */}
         <div className="mb-6">
           <N5Vocabulary />
         </div>
 
-        {/* Step 2: Grammar */}
         <div className="mb-6">
           <N5Grammar />
         </div>
       </div>
 
-      {/* Footer with Go Back Button */}
       <div className="py-8 text-center">
         <button 
           onClick={() => navigate("/")}
