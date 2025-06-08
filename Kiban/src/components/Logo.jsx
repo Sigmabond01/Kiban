@@ -2,7 +2,7 @@ import React from 'react';
 
 const BubbleChamberLogo = () => {
   return (
-    <div className="fixed top-8 left-8 z-50">
+    <div className="absolute top-6 left-4 z-50">
       <div className="flex items-center gap-4 relative">
         <div className="flex flex-col gap-2 relative">
           <div 
