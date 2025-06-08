@@ -3,7 +3,7 @@ import BubbleChamberLogo from "../../components/Logo";
 
 function AboutSection() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-gray-600">
       <header className="w-full px-6 py-4 bg-transparent relative top-0 left-0 z-50 text-white">
         <div className="flex justify-between items-center">
           <nav className="ml-auto space-x-8">
@@ -17,7 +17,7 @@ function AboutSection() {
       <BubbleChamberLogo />
       </div>
 
-      <section className="py-20 px-4 bg-slate-900">
+      <section className="py-20 px-4 bg-gray-600">
         <div className="max-w-6xl mx-auto">
           {/* Main Description */}
           <div className="text-center mb-16">
@@ -96,20 +96,7 @@ function AboutSection() {
               Each level builds upon the previous, ensuring a solid foundation in Japanese language skills.
             </p>
 
-
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Begin Your Journey?</h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Start building your Japanese foundation today with Kiban's comprehensive learning platform.
-          </p>
-          <div className="space-x-4">
-            <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-orange-50">
-              Start with N5
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
-              Take Level Test
-            </Button>
           </div>
-            </div>
         </div>
       </section>
     </div>
@@ -131,30 +118,5 @@ const CardContent = ({ children, className = "" }) => (
     {children}
   </div>
 );
-
-const Button = ({ children, size = "md", variant = "primary", className = "", ...props }) => {
-  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
-  
-  const sizeClasses = {
-    sm: "h-9 px-3 text-sm",
-    md: "h-10 px-4 py-2",
-    lg: "h-11 px-8 text-lg"
-  };
-  
-  const variantClasses = {
-    primary: "bg-orange-600 text-white hover:bg-orange-700",
-    secondary: "bg-white text-orange-600 hover:bg-orange-50",
-    outline: "border border-white text-white hover:bg-white hover:text-orange-600"
-  };
-
-    return (
-    <button 
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
 
 export default AboutSection;
