@@ -3,7 +3,7 @@ import BubbleChamberLogo from "../../components/Logo";
 
 function AboutSection() {
   return (
-    <div className="min-h-screen bg-gray-600">
+    <div className="min-h-screen bg-gradient-to-r from-slate-900 via-slate-900 to-black">
       <header className="w-full px-6 py-4 bg-transparent relative top-0 left-0 z-50 text-white">
         <div className="flex justify-between items-center">
           <nav className="ml-auto space-x-8">
@@ -13,13 +13,11 @@ function AboutSection() {
           </nav>
         </div>
       </header>
-      <div>
-      <BubbleChamberLogo />
-      </div>
+        <BubbleChamberLogo />
 
-      <section className="py-20 px-4 bg-gray-600">
+      <section 
+        className="py-20 px-4 bg-gradient-to-r from-slate-900 via-slate-900 to-black">
         <div className="max-w-6xl mx-auto">
-          {/* Main Description */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-8">What is Kiban?</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -30,7 +28,6 @@ function AboutSection() {
             </p>
           </div>
 
-          {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="bg-slate-800 border-slate-700 hover:bg-slate-700 transition-colors">
               <CardContent className="p-6 text-center">
@@ -65,7 +62,6 @@ function AboutSection() {
             </Card>
           </div>
 
-          {/* JLPT Levels */}
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-12">JLPT Levels</h2>
             <div className="grid md:grid-cols-5 gap-4 max-w-4xl mx-auto">
@@ -95,11 +91,41 @@ function AboutSection() {
               The JLPT consists of 5 levels, starting from N5 (basic) up to N1 (native-level). 
               Each level builds upon the previous, ensuring a solid foundation in Japanese language skills.
             </p>
-
           </div>
         </div>
       </section>
+      <div className="flex items-center justify-center mt-16">
+        <a target="_blank" href="https://freejapaneselessons.com/japanese-alphabet-hiragana/">
+            <button 
+                className="right-80 bottom-16 group relative px-16 py-6 bg-gradient-to-r from-gray-400/20 to-black-500/20 backdrop-blur-sm
+                 text-white border border-white/40 rounded-2xl hover:from-gray-400/30 hover:to-black-500/30
+                  hover:border-white/60 hover:shadow-2xl hover:gray-500/20 transition-all duration-500
+                   font-light text-lg tracking-wide">
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-400/10 to-black-500/10 rounded-2xl blur-xl 
+                group-hover:blur-2xl transition-all duration-500" />
+                <span className="relative z-10 flex items-center gap-3">
+                    <span>Learn Hiragana</span>
+                    <span className="text-2xl">→</span>
+                </span>
+            </button>
+            </a>
+            <a target="_blank" href="https://freejapaneselessons.com/katakana/">
+            <button 
+                className="left-80 bottom-16 group relative px-16 py-6 bg-gradient-to-r from-gray-400/20 to-black-500/20 backdrop-blur-sm
+                 text-white border border-white/40 rounded-2xl hover:from-gray-400/30 hover:to-black-500/30
+                  hover:border-white/60 hover:shadow-2xl hover:gray-500/20 transition-all duration-500
+                   font-light text-lg tracking-wide">
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-400/10 to-black-500/10 rounded-2xl blur-xl 
+                group-hover:blur-2xl transition-all duration-500" />
+                <span className="relative z-10 flex items-center gap-3">
+                    <span>Learn Katakana</span>
+                    <span className="text-2xl">→</span>
+                </span>
+            </button>
+            </a>
+        </div>
     </div>
+    
   );
 }
 
