@@ -7,7 +7,7 @@ const LevelN5 = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[url('/src/assets/background1.png')] bg-fixed bg-cover bg-center text-white flex flex-col">
+    <div className="min-h-screen bg-[url('/src/assets/background1.png')] bg-fixed bg-cover bg-center text-white flex  flex-col">
       <BubbleChamberLogo />
       <div className="text-center py-8">
         <h1 className="text-6xl font-bold mb-4 text-white tracking-wider">
@@ -36,6 +36,13 @@ const LevelN5 = () => {
           Go back to Home
         </button>
       </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-14">
+          <a href="/About/N4">
+            <button className="px-10 py-4 bg-orange-500 text-white rounded-xl hover:bg-orange-600 text-lg font-semibold transition-all duration-300 shadow-xl">
+                 🚀 Next : JPLT N4
+            </button>
+          </a>
+        </div>
     </div>
   );
 };
