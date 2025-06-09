@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import N5Vocabulary from "./N5Vocabulary";
 import N5Grammar from "./N5Grammar";
 import BubbleChamberLogo from "../../components/Logo";
+import { ArrowRight } from "lucide-react";
 
 const LevelN5 = () => {
   const navigate = useNavigate();
@@ -32,6 +33,25 @@ const LevelN5 = () => {
             <N5Grammar />
           </div>
         </div>
+
+        <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-sm border border-orange-400/20 rounded-2xl p-8 max-w-3xl mx-auto">
+                <div className="flex items-start gap-4">
+                  <div className="text-left">
+                    <h4 className="text-orange-400 font-bold text-lg mb-2">FOR LISTENING PRACTICE</h4>
+                    <p className="text-white mb-4">
+                      For listening practice please click the below button
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a target="_blank" href="https://learnjapaneseaz.com/n5-listening-practice" className="flex-1">
+                        <button className="w-full px-6 py-3 bg-white/10 text-white border border-white/30 rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center gap-2">
+                          Start Listening practice here
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
         {/* Navigation Buttons */}
         <div className="py-8 text-center">
