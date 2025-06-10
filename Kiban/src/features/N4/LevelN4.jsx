@@ -9,13 +9,9 @@ const LevelN4 = () => {
 
   return (
     <div className="relative min-h-screen bg-[url('/src/assets/background1.png')] bg-fixed bg-cover bg-center text-white flex flex-col font-noto">
-      {/* Blurred overlay background */}
       <div className="absolute inset-0 backdrop-blur-sm bg-black/30 z-0" />
 
-      {/* Foreground content */}
       <div className="relative z-10 flex flex-col min-h-screen">
-        <BubbleChamberLogo />
-
         {/* Header */}
         <div className="text-center py-8">
           <h1 className="text-6xl font-bold mb-4 tracking-wider">JLPT N4</h1>
@@ -24,7 +20,6 @@ const LevelN4 = () => {
           </p>
         </div>
 
-        {/* Content */}
         <div className="flex-1 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto w-full">
           <div className="mb-6">
             <N4Vocabulary />
@@ -53,7 +48,6 @@ const LevelN4 = () => {
                 </div>
               </div>
 
-        {/* Navigation Buttons */}
         <div className="py-8 text-center">
           <button
             onClick={() => navigate("/")}
