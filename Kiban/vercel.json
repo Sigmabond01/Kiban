@@ -1,6 +1,10 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "build": {
+    "env": {
+      "NODE_ENV": "production" 
+    },
+    "installCommand": "npm install --include=dev",
+    "buildCommand": "npm run build"
+  }
 }
-
 
