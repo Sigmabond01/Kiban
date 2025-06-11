@@ -1,7 +1,7 @@
 # 🏮 KIBAN – Master Japanese the Smarter Way
 
 <div align="center">
-  <img src="src/assets/your-splash-image.png" alt="KIBAN Banner" width="100%" />
+  <img src="src/assets/Logopic.png" alt="KIBAN Banner" width="100%" />
 
   <h3>基盤 (Kiban) – Building Your Foundation in Japanese</h3>
   <p>A sleek, focused platform to master Japanese through structured JLPT preparation.</p>
