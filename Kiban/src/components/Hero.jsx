@@ -4,7 +4,7 @@ import Footer from "./Footer";
 const Hero = () => {
   return (
     <div className="relative w-screen overflow-hidden font-noto">
-      <div className="absolute inset-0 bg-[url('/src/assets/background1.png')] bg-cover bg-center z-0" />
+      <div link rel="preload" className="absolute inset-0 bg-[url('/src/assets/background1.webp')] bg-cover bg-center z-0" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-80 z-10" />
       
       <div className="relative z-20 flex flex-col min-h-screen justify-between">
