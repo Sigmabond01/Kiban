@@ -155,11 +155,11 @@ function AboutSection() {
             <div className="text-center">
               <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-xl border border-orange-400/20 rounded-2xl p-8 max-w-3xl mx-auto">
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Japanese?</h3>
-                <p className="text-orange-100 mb-6">
+                <p className="text-white mb-6">
                   Stop wasting time with apps that don't work. Start building real fluency today.
                 </p>
                 <a href="/About/N5">
-                  <button className="px-12 py-4 bg-white text-orange-600 rounded-xl hover:bg-orange-50 text-lg font-bold transition-all duration-300 shadow-xl hover:scale-105 flex items-center justify-center gap-2 mx-auto">
+                  <button className="px-12 py-4 bg-orange-500 text-white rounded-xl hover:bg-orange-600 text-lg font-bold transition-all duration-300 shadow-xl hover:scale-105 flex items-center justify-center gap-2 mx-auto">
                     🚀 Start JLPT N5 Now
                     <ArrowRight className="w-5 h-5" />
                   </button>
