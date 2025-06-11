@@ -1,10 +1,6 @@
 {
   "build": {
-    "env": {
-      "NODE_ENV": "production" 
-    },
-    "installCommand": "npm install --include=dev",
+    "installCommand": "npm install --production=false",
     "buildCommand": "npm run build"
   }
 }
-
