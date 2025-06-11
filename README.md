@@ -168,7 +168,7 @@ Any host that supports static sites (like Firebase, GitHub Pages, etc.) will wor
 
 🙋 About the Creator
 Sigmabond01 (on X)
-🎓 Electrical Engineering Student
+🎓 Electrical Engineering Student (2nd year UG)
 💻 Full Stack Developer
 🌏 Language tech enthusiast
 📍 On a mission to modernize Japanese learning
@@ -178,7 +178,7 @@ Sigmabond01 (on X)
 
 💡 Request a Feature
 
-📧 Email Support: your@email.com
+📧 DM on X: @Sigmabond01
 
 💬 Join Discord (Coming Soon)
 
