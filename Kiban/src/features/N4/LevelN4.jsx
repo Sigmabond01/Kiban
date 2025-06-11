@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import N4Vocabulary from "./N4Vocabulary";
 import N4Grammar from "./N4Grammar.";
 import { ArrowRight } from "lucide-react";
+import Notice from "../../components/Notice";
 
 const LevelN4 = () => {
   const navigate = useNavigate();
@@ -18,18 +19,7 @@ const LevelN4 = () => {
             Welcome to the JLPT Level N4 curriculum
           </p>
         </div>
-
-        <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 mb-6 backdrop-blur-sm border border-orange-400/20 rounded-2xl p-6 max-w-3xl mx-auto px-2 md:px-4 lg:px-10">
-                <div className="flex items-start">
-                  <div className="text-left">
-                    <h4 className="text-orange-400 font-bold text-lg">IMPORTANT</h4>
-                    <p className="text-white">
-                      Make sure you alternate between each lesson of vocabulary and grammar for better understanding
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+          <Notice />
         <div className="flex-1 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto w-full">
           <div className="mb-6">
             <N4Vocabulary />

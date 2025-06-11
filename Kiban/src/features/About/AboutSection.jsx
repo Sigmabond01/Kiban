@@ -71,7 +71,7 @@ function AboutSection() {
                 {
                   icon: Brain,
                   title: "Retention First",
-                  desc: "We don't teach for dopamine hits. We teach to make it stick.",
+                  desc: "Retention takes priority over entertainment; the goal is lasting knowledge.",
                   accent: "from-purple-400 to-purple-600"
                 },
                 {

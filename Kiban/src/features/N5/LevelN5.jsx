@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import N5Vocabulary from "./N5Vocabulary";
 import N5Grammar from "./N5Grammar";
 import { ArrowRight } from "lucide-react";
+import Notice from "../../components/Notice"
 
 const LevelN5 = () => {
   const navigate = useNavigate();
@@ -11,25 +12,13 @@ const LevelN5 = () => {
       <div className="absolute inset-0 backdrop-blur-sm bg-black/30 z-0" />
 
       <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Header */}
         <div className="text-center py-8">
           <h1 className="text-6xl font-bold mb-4 tracking-wider">JLPT N5</h1>
           <p className="text-xl text-white/90 font-light">
             Welcome to the JLPT Level N5 curriculum
           </p>
         </div>
-
-        <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 mb-6 backdrop-blur-sm border border-orange-400/20 rounded-2xl p-6 max-w-3xl mx-auto px-2 md:px-4 lg:px-10">
-                <div className="flex items-start">
-                  <div className="text-left">
-                    <h4 className="text-orange-400 font-bold text-lg">IMPORTANT</h4>
-                    <p className="text-white">
-                      Make sure you alternate between each lesson of vocabulary and grammar for better understanding
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+        <Notice />
         <div className="flex-1 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto w-full">
           <div className="mb-6">
             <N5Vocabulary />
