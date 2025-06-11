@@ -4,7 +4,7 @@ import { ChevronDown, ChevronRight, FileText, Youtube } from 'lucide-react';
 
 const N5Vocabulary = () => {
   const [expandedSection, setExpandedSection] = useState(false);
-  
+    
   const documentUrl = 'https://archive.org/details/MinnaNoNihongoIITrans/Minna%20no%20Nihongo%20I-Trans/mode/2up';
   
   const [problems, setProblems] = useState([
