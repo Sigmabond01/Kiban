@@ -120,6 +120,7 @@ git commit -m "feat: add amazing feature"
 git push origin feature/amazing-feature
 
 # Open a Pull Request
+```
 
 🚀 Deployment
 🔥 Vercel (Recommended)
@@ -184,4 +185,4 @@ Sigmabond01 (on X)
 📄 License
 Licensed under the MIT License
 
-<div align="center"> Made with ❤️ for Japanese learners worldwide 🇯🇵 If you found KIBAN useful, please consider giving it a ⭐! </div> ```
+<div align="center"> Made with ❤️ for Japanese learners worldwide 🇯🇵 If you found KIBAN useful, please consider giving it a ⭐! </div>
