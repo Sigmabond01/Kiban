@@ -5,9 +5,11 @@ import Hero from "../components/Hero";
 import PublicLayout from "../components/PublicLayout";
 import DashboardLayout from "../components/DashboardLayout";
 import AboutSection from "../features/About/AboutSection";
+import { Suspense } from "react";
 
 const AppRoutes = () => {
   return (
+    <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
     <Routes>
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Hero />} />
@@ -19,6 +21,7 @@ const AppRoutes = () => {
         <Route path="/About/N4" element={<LevelN4 />} />
       </Route>
     </Routes>
+    </Suspense>
   );
 }
 
