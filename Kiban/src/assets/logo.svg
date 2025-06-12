@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="-50 -50 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle -->
+  <circle cx="100" cy="100" r="60" stroke="black" stroke-width="6" fill="none"/>
+
+  <!-- Vertical Line: extra long, pointy ends -->
+  <line x1="100" y1="-100" x2="100" y2="300" stroke="black" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Horizontal Line: extra long, pointy ends -->
+  <line x1="-100" y1="100" x2="300" y2="100" stroke="black" stroke-width="6" stroke-linecap="round"/>
+</svg>

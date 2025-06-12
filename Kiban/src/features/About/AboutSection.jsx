@@ -3,7 +3,7 @@ import BubbleChamberLogo from "../../components/Logo";
 
 function AboutSection() {
   return (
-    <div link rel="preload" className="min-h-screen w-full bg-no-repeat bg-fixed bg-[url('/src/assets/background1.webp')] bg-cover bg-center relative">
+    <div className="min-h-screen w-full bg-no-repeat bg-fixed bg-[url('/src/assets/background1.webp')] bg-cover bg-center relative">
       <div className="absolute inset-0 backdrop-blur-md bg-black/30"></div>
 
       <div className="relative z-10">

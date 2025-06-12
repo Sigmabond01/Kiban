@@ -8,7 +8,7 @@ const LevelN5 = () => {
   const navigate = useNavigate();
 
   return (
-    <div link rel="preload" className="relative min-h-screen bg-[url('/src/assets/background1.webp')] bg-fixed bg-cover bg-center text-white flex flex-col font-noto">
+    <div className="relative min-h-screen bg-[url('/src/assets/background1.webp')] bg-fixed bg-cover bg-center text-white flex flex-col font-noto">
       <div className="absolute inset-0 backdrop-blur-sm bg-black/30 z-0" />
 
       <div className="relative z-10 flex flex-col min-h-screen">
