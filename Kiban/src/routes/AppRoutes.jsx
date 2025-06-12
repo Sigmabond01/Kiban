@@ -5,10 +5,16 @@ import Hero from "../components/Hero";
 import PublicLayout from "../components/PublicLayout";
 import DashboardLayout from "../components/DashboardLayout";
 import AboutSection from "../features/About/AboutSection";
-import { Outlet } from "react-router-dom";
+import React, { lazy, Suspense } from "react"
+
+const Home = lazy(() => import("../pages/Home"))
+const AboutN5 = lazy(() => import("../pages/AboutN5"))
+const AboutN4 = lazy(() => import("../pages/AboutN4"))
+
 
 const AppRoutes = () => {
   return (
+    <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
     <Routes>
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Hero />} />
@@ -20,6 +26,7 @@ const AppRoutes = () => {
         <Route path="/About/N4" element={<LevelN4 />} />
       </Route>
     </Routes>
+    </Suspense>
   );
 }
 
