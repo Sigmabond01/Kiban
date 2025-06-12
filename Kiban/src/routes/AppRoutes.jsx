@@ -1,13 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import LevelN5 from "../features/N5/LevelN5";
 import LevelN4 from "../features/N4/LevelN4";
-import Hero from "../components/Hero";
 import PublicLayout from "../components/PublicLayout";
 import DashboardLayout from "../components/DashboardLayout";
 import AboutSection from "../features/About/AboutSection";
 import React, { lazy, Suspense } from "react"
 
-const Home = lazy(() => import("../pages/Home"))
+const Hero = lazy(() => import("../pages/Hero"))
 const AboutN5 = lazy(() => import("../pages/AboutN5"))
 const AboutN4 = lazy(() => import("../pages/AboutN4"))
 
