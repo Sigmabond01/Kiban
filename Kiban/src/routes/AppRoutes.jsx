@@ -1,16 +1,13 @@
 import { Routes, Route } from "react-router-dom";
+import LevelN5 from "../features/N5/LevelN5";
+import LevelN4 from "../features/N4/LevelN4";
+import Hero from "../components/Hero";
 import PublicLayout from "../components/PublicLayout";
 import DashboardLayout from "../components/DashboardLayout";
 import AboutSection from "../features/About/AboutSection";
-import React, { lazy, Suspense } from "react"
-
-const LevelN5 = lazy(() => import("../pages/LevelN5"))
-const LevelN4 = lazy(() => import("../pages/LevelN4"))
-
 
 const AppRoutes = () => {
   return (
-    <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
     <Routes>
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Hero />} />
@@ -22,7 +19,6 @@ const AppRoutes = () => {
         <Route path="/About/N4" element={<LevelN4 />} />
       </Route>
     </Routes>
-    </Suspense>
   );
 }
 
