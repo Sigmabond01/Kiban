@@ -4,7 +4,6 @@ import DashboardLayout from "../components/DashboardLayout";
 import AboutSection from "../features/About/AboutSection";
 import React, { lazy, Suspense } from "react"
 
-const Hero = lazy(() => import("../pages/Hero"))
 const LevelN5 = lazy(() => import("../pages/LevelN5"))
 const LevelN4 = lazy(() => import("../pages/LevelN4"))
 
