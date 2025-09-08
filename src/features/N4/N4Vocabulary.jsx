@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { ChevronDown, ChevronRight, FileText, Youtube } from 'lucide-react';
+import { useAuth } from '../../context/AuthContext';
+import axios from 'axios';
 
-const N4Vocabulary = () => {
-  const [expandedSection, setExpandedSection] = useState(false);
-  
-  const documentUrl = 'https://archive.org/details/MinnaNoNihongoIITrans/Minna%20No%20Nihongo%20II%20-Trans/mode/2up';
-  
-  const [problems, setProblems] = useState([
-    { id: 1, name: 'Vocabulary 1', status: 'incomplete', youtubeUrl: 'https://youtu.be/1hTBL59rack?si=9A4Dn6b8U-1zL7yO' },
+const API_URL = 'http://localhost:3000/api/lessons';
+const initialLessons = [
+  { id: 1, name: 'Vocabulary 1', status: 'incomplete', youtubeUrl: 'https://youtu.be/1hTBL59rack?si=9A4Dn6b8U-1zL7yO' },
     { id: 2, name: 'Vocabulary 2', status: 'incomplete', youtubeUrl: 'https://youtu.be/9Ux_O4xq6yk?si=dR2cwKHTrP3zDwE7' },
     { id: 3, name: 'Vocabulary 3', status: 'incomplete', youtubeUrl: 'https://youtu.be/62dGe7T9emE?si=bAIkY-N5JvHGhotf' },
     { id: 4, name: 'Vocabulary 4', status: 'incomplete', youtubeUrl: 'https://youtu.be/pQXMFsFOA8M?si=3SvPAhMWETiKbCUM' },
@@ -33,18 +31,64 @@ const N4Vocabulary = () => {
     { id: 23, name: 'Vocabulary 23', status: 'incomplete', youtubeUrl: 'https://youtu.be/bjZwDp7_frI?si=H8BhOVN21sh1hayQ' },
     { id: 24, name: 'Vocabulary 24', status: 'incomplete', youtubeUrl: 'https://youtu.be/qYV1okKHOpI?si=NhYIZQ_n6qBPrwo-' },
     { id: 25, name: 'Vocabulary 25', status: 'incomplete', youtubeUrl: 'https://youtu.be/XCTFEUL-abo?si=_gSL54T6972l1APF' }
-  ]);
+]
+const N4Vocabulary = () => {
+  const [expandedSection, setExpandedSection] = useState(false);
+  const { token, isAuthenticated} = useAuth();
+  const documentUrl = 'https://archive.org/details/MinnaNoNihongoIITrans/Minna%20No%20Nihongo%20II%20-Trans/mode/2up';
+  const [problems, setProblems] = useState([]);
 
-  const toggleProblemStatus = (id) => {
-    setProblems(prev => prev.map(problem => 
-      problem.id === id 
-        ? { ...problem, status: problem.status === 'complete' ? 'incomplete' : 'complete' }
-        : problem
-    ));
+
+  useEffect(() => {
+    const loadProgress = async () => {
+      const lessonsWithStatus = initialLessons.map(l => ({...l, status: 'incomplete '}));
+      if(isAuthenticated && token) {
+        try {
+          const config = { headers: { 'x-auth-token': token } };
+          const response = await axios.get(`${API_URL}/N4/Vocabulary`, config);
+          const savedProgress = response.data;
+          const mergedLessons = lessonsWithStatus.map(lesson => {
+            const savedLesson = savedProgress.find(p => p.lessonId === lesson.id);
+            return savedLesson ? { ...lesson, status: savedLesson.status }: lesson;
+          });
+          setProblems(mergedLessons);
+        } catch (error) {
+          console.error("Error fetching N4 Vocabulary progress: ", error);
+          setProblems(lessonsWithStatus);
+        }
+      } else {
+        setProblems(lessonsWithStatus);
+      }
+    };
+    loadProgress();
+  }, [isAuthenticated, token]);
+
+
+  const toggleProblemStatus = async (id) => {
+    if(!isAuthenticated) {
+      alert("please log in to save your progress!");
+      return;
+    }
+    const lessonToUpdate = problems.find(p => p.id === id);
+    if(!lessonToUpdate) return;
+    const newStatus = lessonToUpdate.status === 'complete' ? 'incomplete' : 'complete';
+    try {
+      const config = { headers: { 'x-auth-token': token } };
+      await axios.post(`${API_URL}/update`, {
+        lessonId: id,
+        level: 'N4',
+        type: 'Vocabulary',
+        status: newStatus
+      }, config);
+      setProblems(prev => prev.map(p => p.id === id ? { ...p, status: newStatus } : p));
+    } catch (error) {
+      console.error("Failed to update lesson status: ", error);
+      alert("Could not save progress. please try again");
+    }
   };
 
   const completedProblems = problems.filter(p => p.status === 'complete').length;
-  const progressPercentage = (completedProblems / 25) * 100;
+  const progressPercentage = problems.length > 0 ? (completedProblems / problems.length) * 100 : 0;
 
   return (
     <div className="bg-transparent shadow-lg border border-gray-700/50 backdrop-blur-sm">
@@ -68,7 +112,7 @@ const N4Vocabulary = () => {
           <div className="flex items-center space-x-2 sm:space-x-6">
             <div className="w-24 sm:w-64 bg-gray-700/50 rounded-full h-2 sm:h-3 overflow-hidden border border-gray-600/50">
               <div 
-                className="bg-gradient-to-r from-orange-500 to-red-500 h-full rounded-full transition-all duration-700 ease-out shadow-lg" 
+                className="bg-gradient-to-r from-orange-500 to-red-500 h-full rounded-full transition-all duration-500 ease-out shadow-lg" 
                 style={{ width: `${progressPercentage}%` }}
               ></div>
             </div>

@@ -1,10 +1,39 @@
+import AboutSection from "../features/About/AboutSection";
 import AboutButton from "./AboutButton";
+import BubbleChamberLogo from "./Logo";
+
 
 const Hero = () => {
+
+  const Link = ({ to, children, className = "" }) => (
+  <a href={to} className={className}>{children}</a>
+);
+
+
   return (
-    <div className="relative w-screen overflow-hidden font-noto">
+    <div>
+    <div className="relative w-full overflow-hidden font-noto">
       <div className="absolute inset-0 bg-[url('/src/assets/background1.webp')] bg-cover bg-center z-0" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-70 z-10" />
+
+        <header className="w-full px-0 py-4 absolute top-4 left-20 z-30">
+  <div className="flex justify-between items-center max-w-7xl mx-auto">
+    <nav className="ml-auto flex items-center space-x-6">
+      <Link
+        to="/login"
+        className="text-white/90 hover:text-orange-400 transition-colors font-medium"
+      >
+        Login
+      </Link>
+      <Link
+        to="/register"
+        className="px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+      >
+        Register
+      </Link>
+    </nav>
+  </div>
+</header>
       
       <div className="relative z-20 flex flex-col min-h-screen justify-between">
         <div className="flex flex-col items-center justify-center text-center px-4 pt-24">
@@ -17,6 +46,10 @@ const Hero = () => {
           <AboutButton />
         </div>
       </div>
+    </div>
+    <div>
+      <AboutSection />
+    </div>
     </div>
   );
 };

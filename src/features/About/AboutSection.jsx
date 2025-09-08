@@ -1,24 +1,9 @@
 import { BookOpen, Target, Users, GraduationCap, Brain, Trophy, ArrowRight } from "lucide-react";
-import BubbleChamberLogo from "../../components/Logo";
 
 function AboutSection() {
   return (
     <div className="min-h-screen w-full bg-no-repeat bg-fixed bg-[url('/src/assets/background1.webp')] bg-cover bg-center relative">
-      <div className="absolute inset-0 backdrop-blur-md bg-black/30"></div>
-
-      <div className="relative z-10">
-        <header className="w-full px-6 py-4">
-          <div className="flex justify-between items-center">
-            <nav className="ml-auto space-x-8">
-              <Link to="/" className="text-white hover:text-orange-400 transition-colors">Home</Link>
-              <Link to="/About/N5" className="text-white hover:text-orange-400 transition-colors">JLPT N5</Link>
-              <Link to="/About/N4" className="text-white hover:text-orange-400 transition-colors">JLPT N4</Link>
-            </nav>
-          </div>
-        </header>
-
-        <BubbleChamberLogo />
-
+      <div className="relative inset-0 backdrop-blur-md bg-black/30"></div>
         <section className="px-6 py-16 font-noto">
           <div className="max-w-6xl mx-auto">
             
@@ -170,7 +155,6 @@ function AboutSection() {
           </div>
         </section>
       </div>
-    </div>
   );
 }
 

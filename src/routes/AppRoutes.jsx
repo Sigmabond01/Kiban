@@ -6,6 +6,8 @@ import PublicLayout from "../components/PublicLayout";
 import DashboardLayout from "../components/DashboardLayout";
 import AboutSection from "../features/About/AboutSection";
 import { Suspense } from "react";
+import Register from "../Register";
+import Login from "../Login";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +15,8 @@ const AppRoutes = () => {
     <Routes>
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Hero />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Route>
 
       <Route element={<DashboardLayout />}>
