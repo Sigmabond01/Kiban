@@ -71,7 +71,7 @@ export default function Starthere() {
                         <Star className="w-4 h-4 text-orange-400" />
                         <span className="text-orange-300 text-sm font-medium">Your Path to Japanese Fluency</span>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 text-orange-500 text-transparent">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 text-orange-500">
                         Master Japanese with KIBAN
                     </h1>
                     <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
