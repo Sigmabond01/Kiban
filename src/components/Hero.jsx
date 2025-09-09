@@ -1,7 +1,5 @@
 import AboutSection from "../features/About/AboutSection";
 import AboutButton from "./AboutButton";
-import BubbleChamberLogo from "./Logo";
-
 
 const Hero = () => {
 
@@ -18,7 +16,7 @@ const Hero = () => {
 
         <header className="w-full px-0 py-4 absolute top-4 left-20 z-30">
   <div className="flex justify-between items-center max-w-7xl mx-auto">
-    <nav className="ml-auto flex items-center space-x-6">
+    <nav className="ml-auto flex items-center font-noto space-x-6">
       <Link
         to="/login"
         className="text-white/90 hover:text-orange-400 transition-colors font-medium"

@@ -25,7 +25,7 @@ const Login = () => {
         };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-[url('/src/assets/background1.webp')] bg-cover bg-center">
+        <div className="flex items-center justify-center min-h-screen bg-[url('/src/assets/background1.webp')] font-noto bg-cover bg-center">
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
             <form
                 onSubmit={onSubmit}
