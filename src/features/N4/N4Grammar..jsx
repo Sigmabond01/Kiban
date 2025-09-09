@@ -3,7 +3,7 @@ import { Search, ChevronDown, ChevronRight, Play, FileText, Youtube } from 'luci
 import { useAuth } from '../../context/AuthContext';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/lessons';
+const API_URL = 'https://kiban-backend.onrender.com/api/lessons';
 
 const initialLessons = [
   { id: 1, name: 'Grammar 1', status: 'incomplete', youtubeUrl: 'https://youtu.be/Ly3Tn2MkHIQ?si=_mq5_z6AIWSwNjsf' },

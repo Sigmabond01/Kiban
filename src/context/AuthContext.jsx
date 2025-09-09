@@ -5,7 +5,7 @@ const AuthContext = createContext(null);
 
 export const useAuth = () => useContext(AuthContext);
 
-const API_URL = 'http://localhost:3000/api/auth';
+const API_URL = 'https://kiban-backend.onrender.com/api/auth';
 
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token'));

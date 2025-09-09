@@ -4,7 +4,7 @@ import { ChevronDown, ChevronRight, FileText, Youtube } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/lessons';
+const API_URL = 'https://kiban-backend.onrender.com/api/lessons';
 
 const initialLessons = [
   { id: 1, name: 'Vocabulary 1', status: 'incomplete', youtubeUrl: 'https://youtu.be/wDpsF90DoeI?si=e9gAY1ja7_UTdBdQ' },
