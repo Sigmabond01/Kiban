@@ -14,7 +14,7 @@ const Hero = () => {
     <div>
     <div className="relative w-full overflow-hidden font-noto">
       <div className="absolute inset-0 bg-[url('/src/assets/background1.webp')] bg-cover bg-center z-0" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-70 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/100 z-10" />
 
         <header className="w-full px-0 py-4 absolute top-4 left-20 z-30">
   <div className="flex justify-between items-center max-w-7xl mx-auto">

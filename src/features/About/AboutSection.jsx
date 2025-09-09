@@ -2,13 +2,13 @@ import { BookOpen, Target, Users, GraduationCap, Brain, Trophy, ArrowRight } fro
 
 function AboutSection() {
   return (
-    <div className="min-h-screen w-full bg-no-repeat bg-fixed bg-[url('/src/assets/background1.webp')] bg-cover bg-center relative">
-      <div className="relative inset-0 backdrop-blur-md bg-black/30"></div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-black via-orange-950 to-black relative">
+      <div className="relative inset-0 backdrop-blur-md bg-black/90"></div>
         <section className="px-6 py-16 font-noto">
           <div className="max-w-6xl mx-auto">
             
             <div className="text-center mb-20">
-              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white tracking-normal">
                 KIBAN isn't just a platform—<br />
                 <h1 className="mb-10">
                 <span className="text-orange-400">it's your foundation</span>
@@ -110,31 +110,6 @@ function AboutSection() {
                   </Card>
                 ))}
               </div>
-
-              <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-xl border border-orange-400/20 rounded-2xl p-8 max-w-3xl mx-auto">
-                <div className="flex items-start gap-4">
-                  <div className="text-left">
-                    <h4 className="text-orange-400 font-bold text-lg mb-2">Before You Begin</h4>
-                    <p className="text-white mb-4">
-                      Master Hiragana and Katakana first. These are your foundation—without them, everything else crumbles.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <a target="_blank" href="https://freejapaneselessons.com/japanese-alphabet-hiragana/" className="flex-1">
-                        <button className="w-full px-6 py-3 bg-white/10 text-white border border-white/30 rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center gap-2">
-                          Learn Hiragana
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </a>
-                      <a target="_blank" href="https://freejapaneselessons.com/katakana/" className="flex-1">
-                        <button className="w-full px-6 py-3 bg-white/10 text-white border border-white/30 rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center gap-2">
-                          Learn Katakana
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="text-center">
@@ -143,9 +118,9 @@ function AboutSection() {
                 <p className="text-white mb-6">
                   Stop wasting time with apps that don't work. Start building real fluency today.
                 </p>
-                <a href="/About/N5">
+                <a href="/register">
                   <button className="px-12 py-4 bg-orange-500 text-white rounded-xl hover:bg-orange-600 text-lg font-bold transition-all duration-300 shadow-xl hover:scale-105 flex items-center justify-center gap-2 mx-auto">
-                    🚀 Start JLPT N5 Now
+                    Get Started Now!
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </a>

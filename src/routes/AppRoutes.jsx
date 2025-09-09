@@ -8,6 +8,7 @@ import AboutSection from "../features/About/AboutSection";
 import { Suspense } from "react";
 import Register from "../Register";
 import Login from "../Login";
+import Starthere from "../features/Starthere";
 
 const AppRoutes = () => {
   return (
@@ -17,12 +18,12 @@ const AppRoutes = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/start" element={<Starthere />} />
       </Route>
 
       <Route element={<DashboardLayout />}>
-        <Route path="/About" element={<AboutSection />} />
-        <Route path="/About/N5" element={<LevelN5 />} />
-        <Route path="/About/N4" element={<LevelN4 />} />
+        <Route path="/start/N5" element={<LevelN5 />} />
+        <Route path="/start/N4" element={<LevelN4 />} />
       </Route>
     </Routes>
     </Suspense>

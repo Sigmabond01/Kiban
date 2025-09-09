@@ -57,7 +57,7 @@ const LevelN5 = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-14">
-          <a href="/About/N4">
+          <a href="/start/N4">
             <button className="px-10 py-4 bg-orange-500 text-white rounded-xl hover:bg-orange-600 text-lg font-semibold transition-all duration-300 shadow-xl">
               🚀 Next : JLPT N4
             </button>
