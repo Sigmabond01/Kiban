@@ -4,17 +4,15 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-  "config": {
-    "distDir": "dist"
-  }
-}
+      "config": {
+        "distDir": "dist",
+        "installCommand": "npm install",
+        "buildCommand": "npm run build"
+      }
+    }
   ],
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "installCommand": "npm install",
-    "buildCommand": "npm run build"
+  "env": {
+    "NODE_ENV": "production"
   },
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
